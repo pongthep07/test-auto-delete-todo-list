@@ -25,11 +25,6 @@ const App = () => {
   const [todoListSelect, setTodoListSelect] = useState<TodoItem[]>([]);
 
   const moveItemToColumn = (item: TodoItem) => {
-    // if (item.type === 'Fruit') {
-    //   setFruitList(prevState => [...prevState, item]);
-    // } else {
-    //   setVegetableList(prevState => [...prevState, item]);
-    // }
 
     setTodoListSelect(prevState => [...prevState, item])
     setTodoList(prevState => prevState.filter(todo => todo !== item));
